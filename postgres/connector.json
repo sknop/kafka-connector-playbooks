@@ -1,0 +1,23 @@
+{
+    "name": "debezium_postgres",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "tasks.max": "1",
+        "database.hostname": "postgres",
+        "database.port": "5432",
+        "database.user": "postgres",
+        "database.password": "example",
+        "database.dbname" : "postgres",
+        "database.server.name": "binarytest",
+        "plugin.name": "pgoutput",
+        "key.converter" : "io.confluent.connect.avro.AvroConverter",
+        "key.converter.schema.registry.url": "http://schema-registry:8081",
+        "value.converter" : "io.confluent.connect.avro.AvroConverter",
+        "value.converter.schema.registry.url": "http://schema-registry:8081",
+
+        "transforms": "addTopicSuffix",
+        "transforms.addTopicSuffix.type":"org.apache.kafka.connect.transforms.RegexRouter",
+        "transforms.addTopicSuffix.regex":"(.*)",
+        "transforms.addTopicSuffix.replacement":"$1-raw"
+    }
+}
