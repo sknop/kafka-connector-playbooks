@@ -16,5 +16,5 @@ curl  -X POST -H "Content-Type: application/json" --data @connector.json http://
 
 sleep 1
 
-kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic binarytest.public.with_binary-raw --property schema.registry.url="http://localhost:8081" --from-beginning
+kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic binarytest.public.with_binary-raw --property schema.registry.url="http://localhost:8081" --from-beginning --property print.key=true
 

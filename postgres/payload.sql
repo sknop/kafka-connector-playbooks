@@ -12,3 +12,6 @@ insert into with_binary values (4, 'somestring 4', '\xDDDDDDDD');
 insert into with_binary values (5, 'somestring 5', '\xEEEEEEEE');
 insert into with_binary values (6, 'somestring 6', '\xFFFFFFFF');
 insert into with_binary values (7, 'somestring 7', '\x00000000');
+insert into with_binary values (8, 'somestring 8', '\x70000000');
+insert into with_binary values (9, 'somestring 9', '\x15');
+

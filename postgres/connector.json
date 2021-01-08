@@ -20,7 +20,7 @@
         "transforms.addTopicSuffix.type":"org.apache.kafka.connect.transforms.RegexRouter",
         "transforms.addTopicSuffix.regex":"(.*)",
         "transforms.addTopicSuffix.replacement":"$1-raw",
-        "transforms.castBinary.type":"org.apache.kafka.connect.transforms.Cast$Value",
+        "transforms.castBinary.type":"com.sknop.kafka.connect.transforms.Cast$Value",
         "transforms.castBinary.spec":"payload:string"
     }
 }
